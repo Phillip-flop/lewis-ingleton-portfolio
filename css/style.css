@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  border: red solid 1px;
 }
 
 body {
@@ -9,25 +10,142 @@ body {
   line-height: 1.5;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 
-/* Header */
+p {
+  margin: 0;
+}
+
+/* Header & nav */
 
 header {
-  background-image: linear-gradient(#ff9f5e, white);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  padding: 21px;
+  background-color: #ffa27a;
+  padding: 10px 0px 10px 0px;
+  height: 150px;
+}
+
+h1 {
+  background-image: linear-gradient(to left, #ffa27a, #ff7a7a);
+  padding: 20px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+nav {
+  background-image: linear-gradient(to right, #ffa27a, #ff7a7a);
 
 }
 
-nav ul {
+nav ul li {
+  display: inline-block;
   text-decoration: none;
+  padding: 15px;
+  font-size: 24px;
 }
 
-/* CSS grid container */
+nav ul li:hover {
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
 
-.container1 {
+/* Hero banner */
+
+.hero-banner {
+  background-image: linear-gradient(to left, #ffa27a, #ff7a7a, #ffa27a);
+  padding: 20px;
+  text-align: center;
+}
+
+/* main */
+
+.page-wrapper {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.page-selection {}
+
+#about {
+  height: 150px;
   display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  gap: 15px 15px;
+  grid-template-areas:
+    "aboutH2 aboutCopy"
+  ;
+}
+
+#about h2 {
+  grid-area: aboutH2;
+}
+
+#about p {
+  grid-area: aboutCopy;
+}
+
+#work {
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 2fr);
+  grid-template-rows: 50% 25% 25%;
+  gap: 15px 15px;
+  grid-template-areas:
+    "workH2 workEG1 workEG1"
+    "workH2 workEG2 workEG3"
+    "workH2 workEG4 workEG5"
+  ;
+}
+
+#about h2 {
+  grid-area: aboutH2;
+}
+
+#about p {
+  grid-area: aboutCopy;
+}
+
+#work h2 {
+  grid-area: workH2;
+}
+
+#workEG1 {
+  grid-area: workEG1;
+  background-color: blue;
+  height: 150px;
+}
+
+#workEG2 {
+  grid-area: workEG2;
+  background-color: red;
+  height: 75px;
+}
+
+#workEG3 {
+  grid-area: workEG3;
+  background-color: green;
+  height: 75px;
+}
+
+#workEG4 {
+  grid-area: workEG4;
+  background-color: yellow;
+  height: 75px;
+}
+
+#workEG5 {
+  grid-area: workEG5;
+  background-color: pink;
+  height: 75px;
 }
