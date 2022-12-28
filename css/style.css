@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: red solid 1px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -15,12 +15,48 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
 p {
-  margin: 0;
+  font-size: 1rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Header & nav */
@@ -31,11 +67,19 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #ffa27a;
-  padding: 10px 0px 10px 0px;
+  padding: 0px;
   height: 150px;
 }
 
-h1 {
+header img {
+  background-image: url(../images/lewis-ingleton.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+}
+
+#title-container {
   background-image: linear-gradient(to left, #ffa27a, #ff7a7a);
   padding: 20px;
   border-radius: 0px 4px 4px 0px;
@@ -43,28 +87,20 @@ h1 {
 
 nav {
   background-image: linear-gradient(to right, #ffa27a, #ff7a7a);
-
+  height: 100%;
+  padding-top: 20px;
 }
 
 nav ul li {
   display: inline-block;
   text-decoration: none;
   padding: 15px;
-  font-size: 24px;
+  font-size: 1.75rem;
 }
 
 nav ul li:hover {
   color: white;
-  font-size: 26px;
   cursor: pointer;
-}
-
-/* Hero banner */
-
-.hero-banner {
-  background-image: linear-gradient(to left, #ffa27a, #ff7a7a, #ffa27a);
-  padding: 20px;
-  text-align: center;
 }
 
 /* main */
@@ -74,78 +110,118 @@ nav ul li:hover {
   margin: 30px auto;
 }
 
-.page-selection {}
+.page-section {
+  margin-top: 30px;
+}
+
+/* About me section */
 
 #about {
-  height: 150px;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: auto;
-  gap: 15px 15px;
+  grid-template-rows: 150px;
+  gap: 40px;
   grid-template-areas:
-    "aboutH2 aboutCopy"
+    "aboutH2 aboutEG1"
   ;
 }
 
 #about h2 {
   grid-area: aboutH2;
+  border-right: #ff7a7a solid 3px;
 }
 
-#about p {
-  grid-area: aboutCopy;
+#aboutEG1 {
+  grid-area: aboutEG1;
 }
+
+/* Work section */
+
 
 #work {
-  height: 300px;
   display: grid;
   grid-template-columns: 1fr repeat(2, 2fr);
-  grid-template-rows: 50% 25% 25%;
-  gap: 15px 15px;
+  grid-template-rows: 200px 200px 200px 200px;
+  gap: 20px;
   grid-template-areas:
+    "workH2 workEG1 workEG1"
     "workH2 workEG1 workEG1"
     "workH2 workEG2 workEG3"
     "workH2 workEG4 workEG5"
   ;
 }
 
-#about h2 {
-  grid-area: aboutH2;
+.work-heading {
+  background-image: linear-gradient(to left, rgb(255, 162, 122, 0.7), rgb(255, 122, 122, 0.7));
+  padding: 20px 20px 20px 10px;
 }
 
-#about p {
-  grid-area: aboutCopy;
+.work-box {
+  background-position: center;
+  background-repeat: no-repeat;
+  border: #ff7a7a solid 3px;
+  display: grid;
+  align-content: end;
 }
 
 #work h2 {
   grid-area: workH2;
+  border-right: #ff7a7a solid 3px;
 }
 
 #workEG1 {
   grid-area: workEG1;
-  background-color: blue;
-  height: 150px;
+  background-image: url(../images/02-portfolio-1.jpg);
 }
 
 #workEG2 {
   grid-area: workEG2;
-  background-color: red;
-  height: 75px;
+  background-image: url(../images/02-portfolio-2.jpg);
 }
 
 #workEG3 {
   grid-area: workEG3;
-  background-color: green;
-  height: 75px;
+  background-image: url(../images/02-portfolio-3.jpg);
 }
 
 #workEG4 {
   grid-area: workEG4;
-  background-color: yellow;
-  height: 75px;
+  background-image: url(../images/02-portfolio-4.jpg);
 }
 
 #workEG5 {
   grid-area: workEG5;
-  background-color: pink;
-  height: 75px;
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
+/* Contact me section */
+
+#contact {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 150px;
+  gap: 40px;
+  grid-template-areas:
+    "contactH2 contactEG1"
+  ;
+}
+
+#contact h2 {
+  grid-area: contactH2;
+  border-right: #ff7a7a solid 3px;
+}
+
+#contactEG1 {
+  grid-area: contactEG1;
+}
+
+/* Footer */
+
+footer {
+  background-color: rgb(16, 16, 16);
+  height: 150px;
+  color: #ff7a7a;
+  text-align: center;
+  padding: 50px;
+  margin-top: 50px;
 }
