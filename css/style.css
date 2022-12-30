@@ -141,10 +141,9 @@ nav ul li:hover {
 #work {
   display: grid;
   grid-template-columns: 1fr repeat(2, 2fr);
-  grid-template-rows: 200px 200px 200px 200px;
+  grid-template-rows: 400px 200px 200px;
   gap: 20px;
   grid-template-areas:
-    "workH2 workEG1 workEG1"
     "workH2 workEG1 workEG1"
     "workH2 workEG2 workEG3"
     "workH2 workEG4 workEG5"
