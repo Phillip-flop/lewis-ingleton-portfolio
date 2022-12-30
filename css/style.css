@@ -69,15 +69,18 @@ header {
   background-color: #ffa27a;
   padding: 0px;
   height: 150px;
+  
 }
 
-header img {
+/*
+header {
   background-image: url(../images/lewis-ingleton.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 150px;
 }
+*/
 
 #title-container {
   background-image: linear-gradient(to left, #ffa27a, #ff7a7a);
@@ -223,4 +226,57 @@ footer {
   text-align: center;
   padding: 50px;
   margin-top: 50px;
+}
+
+
+@media screen and (max-width: 1200px) {
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffa27a;
+    padding: 0px;
+    /*height: 150px; */
+  }
+  
+  #title-container {
+    background-image: linear-gradient(to left, #ffa27a, #ff7a7a);
+    padding: 20px;
+    border-radius: 0px 4px 4px 0px;
+    
+    font-size: 1em;
+  }
+  
+  nav {
+    background-image: linear-gradient(to right, #ffa27a, #ff7a7a);
+    height: 100%;
+    padding-top: 1em;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75em;
+    font-size: 0.75rem;
+  }
+  
+}
+
+@media screen and (max-width: 700px) {
+  #work {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  /*  grid-template-rows: 400px; */
+
+    gap: 20px;
+
+    grid-template-areas:
+    "workH2 workEG1"
+    "workH2 workEG2"
+    "workH2 workEG3"
+    "workH2 workEG4"
+    "workH2 workEG5"
+  ;
+  }
 }
