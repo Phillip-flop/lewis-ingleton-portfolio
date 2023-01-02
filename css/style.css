@@ -230,11 +230,13 @@ footer {
   #about {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 
   #contact {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
   #about h2 {
@@ -262,14 +264,12 @@ footer {
 
   #title-container,
   h1 {
-    border-radius: 0px 4px 4px 0px;
     font-size: 1.8rem;
   }
 
   #title-container,
 
   h2 {
-    border-radius: 0px 4px 4px 0px;
     font-size: 1.5rem;
   }
 
@@ -296,14 +296,12 @@ footer {
 
   #title-container,
   h1 {
-    border-radius: 0px 4px 4px 0px;
     font-size: 1.8rem;
   }
 
   #title-container,
 
   h2 {
-    border-radius: 0px 4px 4px 0px;
     font-size: 1.5rem;
   }
 
