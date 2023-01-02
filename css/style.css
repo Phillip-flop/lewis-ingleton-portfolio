@@ -118,7 +118,6 @@ nav ul li:hover {
 #about {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 150px;
   gap: 40px;
   grid-template-areas:
     "aboutH2 aboutEG1"
@@ -197,7 +196,6 @@ nav ul li:hover {
 #contact {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 150px;
   gap: 40px;
   grid-template-areas:
     "contactH2 contactEG1"
