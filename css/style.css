@@ -109,6 +109,10 @@ nav ul li:hover {
   margin-top: 30px;
 }
 
+.page-section h2 {
+  padding-right: 1px;
+}
+
 /* About me section */
 
 #about {
@@ -208,6 +212,12 @@ nav ul li:hover {
 #contactEG1 {
   grid-area: contactEG1;
 }
+
+#contact a:hover {
+  color: #ff7a7a;
+}
+
+
 
 /* Footer */
 
