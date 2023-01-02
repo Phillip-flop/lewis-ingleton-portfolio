@@ -62,34 +62,30 @@ a:hover {
 /* Header & nav */
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffa27a;
+  background-image: linear-gradient(to left, rgb(255, 162, 122), rgb(255, 122, 122));
   padding: 0px;
-  height: 150px;
-  
+
 }
 
-/*
-header {
-  background-image: url(../images/lewis-ingleton.JPG);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 150px;
+#header-wrapper {
+  max-width: 1000px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  text-align: center;
 }
-*/
+
 
 #title-container {
-  background-image: linear-gradient(to left, #ffa27a, #ff7a7a);
   padding: 20px;
-  border-radius: 0px 4px 4px 0px;
+  margin-bottom: 0px;
 }
 
 nav {
-  background-image: linear-gradient(to right, #ffa27a, #ff7a7a);
   height: 100%;
   padding-top: 20px;
 }
@@ -98,7 +94,7 @@ nav ul li {
   display: inline-block;
   text-decoration: none;
   padding: 15px;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 nav ul li:hover {
@@ -110,6 +106,7 @@ nav ul li:hover {
 
 .page-wrapper {
   width: 80%;
+  max-width: 1000px;
   margin: 30px auto;
 }
 
@@ -229,54 +226,118 @@ footer {
 }
 
 
-@media screen and (max-width: 1200px) {
-  
+@media screen and (max-width: 426px) {
+  #work {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about h2 {
+    border-bottom: #ff7a7a solid 3px;
+    border-right: none;
+  }
+
+  #work h2 {
+    border-bottom: #ff7a7a solid 3px;
+    border-right: none;
+  }
+
+  #contact h2 {
+    border-bottom: #ff7a7a solid 3px;
+    border-right: none;
+  }
+
   header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #ffa27a;
+    background-image: linear-gradient(to left, rgb(255, 162, 122), rgb(255, 122, 122));
     padding: 0px;
-    /*height: 150px; */
   }
-  
-  #title-container {
-    background-image: linear-gradient(to left, #ffa27a, #ff7a7a);
-    padding: 20px;
+
+  #title-container,
+  h1 {
     border-radius: 0px 4px 4px 0px;
-    
-    font-size: 1em;
+    font-size: 1.8rem;
   }
-  
+
+  #title-container,
+
+  h2 {
+    border-radius: 0px 4px 4px 0px;
+    font-size: 1.5rem;
+  }
+
   nav {
-    background-image: linear-gradient(to right, #ffa27a, #ff7a7a);
     height: 100%;
     padding-top: 1em;
   }
-  
+
   nav ul li {
     display: inline-block;
     text-decoration: none;
     padding: 0.75em;
-    font-size: 0.75rem;
+    font-size: 1.25rem;
   }
-  
+
+  .work-box {
+    height: 150px;
+  }
+
 }
 
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 769px) and (min-width: 427px) {
+
+  #title-container,
+  h1 {
+    border-radius: 0px 4px 4px 0px;
+    font-size: 1.8rem;
+  }
+
+  #title-container,
+
+  h2 {
+    border-radius: 0px 4px 4px 0px;
+    font-size: 1.5rem;
+  }
+
+  nav {
+    height: 100%;
+    padding-top: 1em;
+  }
+
+  nav ul li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.75em;
+    font-size: 1.25rem;
+  }
+
   #work {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-  /*  grid-template-rows: 400px; */
-
+    grid-template-columns: 1fr repeat(2, 2fr);
+    grid-template-rows: 250px 200px 200px;
     gap: 20px;
-
     grid-template-areas:
-    "workH2 workEG1"
-    "workH2 workEG2"
-    "workH2 workEG3"
-    "workH2 workEG4"
-    "workH2 workEG5"
-  ;
+      "workH2 workEG1 workEG1"
+      "workH2 workEG2 workEG3"
+      "workH2 workEG4 workEG5"
+    ;
+  }
+
+  .page-section h2 {
+    font-size: 1.5rem;
+    padding: 4px;
   }
 }
