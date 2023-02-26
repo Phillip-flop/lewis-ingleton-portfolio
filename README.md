@@ -4,11 +4,11 @@ This challenge is to create a personal portfolio where I can show my work and co
 
 ## Consists of
 
-Link to Github repository https://github.com/Phillip-flop/lewis-ingleton-portfolio
+Link to Github repository https://github.com/lewis-ingleton/lewis-ingleton-portfolio
 
 And
 
-Live page link https://phillip-flop.github.io/lewis-ingleton-portfolio/
+Live page link https://lewis-ingleton.github.io/lewis-ingleton-portfolio/
 
 ## Things to note 
 
